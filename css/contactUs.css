@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  background-color: #eedede;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 9fr;
+      grid-template-rows: 1fr 9fr;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  font-family: "Montserrat", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  height: 10vh;
+}
+
+nav #menu {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eea39b;
+}
+
+nav li {
+  position: relative;
+  top: 10vh;
+}
+
+nav #logo {
+  width: 60vw;
+}
+
+nav #menuButton:checked ~ div {
+  display: block;
+}
+
+nav #menuButton {
+  display: none;
+}
+
+nav label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul li a {
+  border-radius: 10px;
+  background-color: salmon;
+  -webkit-box-shadow: 5px 5px 5px 5px burlywood;
+          box-shadow: 5px 5px 5px 5px burlywood;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav #burgerButton {
+  width: 15vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+iframe {
+  width: 80vw;
+  height: 80vw;
+}
+/*# sourceMappingURL=contactUs.css.map */

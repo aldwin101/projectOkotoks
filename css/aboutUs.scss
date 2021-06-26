@@ -1,0 +1,42 @@
+@import 'variables';
+
+@import 'nav';
+
+#text {
+    font-family: $aboutFont;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: $aboutFont;
+    font-size: 1.2rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: $websiteFont;
+}
+
+#gallery {
+    background-color: black;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10vw;
+    padding: 5vw;
+    justify-items: center;
+    align-items: center;
+    overflow-y: auto;
+    
+
+    .photoGallery {
+        width: 70vw;
+        border-radius: 5px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+}

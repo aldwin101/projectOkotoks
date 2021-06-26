@@ -1,0 +1,62 @@
+@import 'variables';
+
+@import 'nav';
+
+* {
+    font-family: $websiteFont;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sub {
+    width: 100vw;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    a {
+        font-size: 4vw;
+        margin: 2vw;
+    }
+}
+
+#pizzaMenu {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    row-gap: 2vh;
+}
+
+.pizza {
+    border-radius: 10px;
+    width: 35vw;
+}
+
+.name {
+    font-weight: bolder;
+    font-size: 7vw;
+}
+
+.description {
+    font-family: $aboutFont;
+    font-size: 5vw;
+}
+
+main {
+    img {
+        margin-left: 2vw;
+    }
+    div {
+        p {
+            margin-left: 3vw;
+        }
+    }
+}

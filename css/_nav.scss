@@ -1,0 +1,73 @@
+@import 'variables';
+
+* {
+    padding:0;
+    margin:0;
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    background-color:#eedede;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    font-family: $websiteFont;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    height: 10vh;
+    #menu {
+        display: none;
+        position: fixed;
+        top:10vh;
+        height: 100vh;
+        width: 100vw;
+        background-color:rgb(238, 163, 155);
+    }
+
+    li {
+        position: relative;
+        top:10vh;
+    }
+
+    #logo {
+        width: 60vw;
+    }
+
+    #menuButton:checked ~ div {
+        display: block;
+    }
+    
+    #menuButton {
+        display: none;
+    }
+    
+    label {
+        user-select: none;
+    }
+
+    ul {
+        text-align: center;
+        li {
+            padding: 15px;
+            a {
+            border-radius: 10px;
+            background-color: salmon;
+            box-shadow: 5px 5px 5px 5px burlywood;
+            padding: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            }
+        }
+    }
+    #burgerButton {
+        width: 15vw;
+    }
+}
