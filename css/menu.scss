@@ -14,6 +14,7 @@ body {
     width: 100vw;
 }
 
+
 #sub {
     width: 100vw;
     padding-top: 2vh;
@@ -25,6 +26,8 @@ body {
     }
 }
 
+
+/*Pizza Menu*/
 #pizzaMenu {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -39,6 +42,74 @@ body {
     border-radius: 10px;
     width: 35vw;
 }
+/**Pizza menu end**/
+
+
+/**Pasta menu**/
+#pastaMenu {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    width: 100vw;
+    row-gap: 2vh;
+}
+
+.pasta {
+    border-radius: 10px;
+    width: 35vw;
+}
+/**Pasta menu end**/
+
+
+/*Drinks*/
+#beverage {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    width: 100vw;
+    row-gap: 2vh;
+    h2 {
+        text-align: center;
+        font-family: $aboutFont;
+        font-size: 8vw;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .drinks {
+        border-radius: 10px;
+        width: 35vw;
+    }
+}
+/*Drinks end*/
+
+
+/*Chicken*/
+#chicken {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    row-gap: 2vh;
+}
+#wings {
+    border-radius: 10px;
+    width: 35vw;
+}
+/*Chicken end*/
+
+
+/*Dessert end*/
+#dessert {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    row-gap: 2vh;
+}
+#brownies {
+    border-radius: 10px;
+    width: 35vw;
+}
+/*Dessert end*/
+
 
 .name {
     font-weight: bolder;

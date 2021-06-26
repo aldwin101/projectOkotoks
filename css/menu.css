@@ -110,6 +110,7 @@ body {
   margin: 2vw;
 }
 
+/*Pizza Menu*/
 #pizzaMenu {
   display: -ms-grid;
   display: grid;
@@ -130,6 +131,88 @@ body {
   width: 35vw;
 }
 
+/**Pizza menu end**/
+/**Pasta menu**/
+#pastaMenu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  row-gap: 2vh;
+}
+
+.pasta {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+/**Pasta menu end**/
+/*Drinks*/
+#beverage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  row-gap: 2vh;
+}
+
+#beverage h2 {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 8vw;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#beverage .drinks {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+/*Drinks end*/
+/*Chicken*/
+#chicken {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  row-gap: 2vh;
+}
+
+#wings {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+/*Chicken end*/
+/*Dessert end*/
+#dessert {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  row-gap: 2vh;
+}
+
+#brownies {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+/*Dessert end*/
 .name {
   font-weight: bolder;
   font-size: 7vw;
