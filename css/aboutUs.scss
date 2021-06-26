@@ -2,6 +2,14 @@
 
 @import 'nav';
 
+body {
+    background-color:#eedede;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    width: 100%;
+    height: 100%;
+}
+
 #text {
     font-family: $aboutFont;
     color: white;

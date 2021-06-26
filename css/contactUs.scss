@@ -3,6 +3,12 @@
 @import 'nav';
 
 body {
+    display: grid;
+    grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    background-color:#eedede;
+    height: 100vh;
+    width: 100vw;
     font-family: $websiteFont;
     text-align: center;
 }

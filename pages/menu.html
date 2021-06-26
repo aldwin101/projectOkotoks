@@ -6,33 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Okotoks Pizza</title>
     <link rel="stylesheet" href="/css/menu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.html"><img id="logo" src="/media/images/websiteLogo.png" alt=""></a>
-            <label for="menuButton"><img id="burgerButton" src="/media/images/menuButton.png" alt=""></label>
-            <input type="checkbox" id="menuButton">
-            <div id="menu">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/menu.html">Menu</a></li>
-                    <li><a href="/pages/aboutUs.html">About Us</a></li>
-                    <li><a href="/pages/contactUs.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="sub">
-            <a href="">Pizza</a>
-            <a href="">Pasta</a>
-            <a href="">Drinks</a>
-            <a href="">Chicken</a>
-            <a href="">Dessert</a>
+<header>
+    <nav>
+        <a href="index.html"><img id="logo" src="/media/images/websiteLogo.png" alt="websiteLogo"></a>
+        <label for="menuButton"><img id="burgerButton" src="/media/images/menuButton.png" alt="burgerButton"></label>
+        <input type="checkbox" id="menuButton">
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/menu.html">Menu</a></li>
+                <li><a href="/pages/aboutUs.html">About Us</a></li>
+                <li><a href="/pages/contactUs.html">Contact Us</a></li>
+            </ul>
         </div>
-    </header>
-        <main id="pizzaMenu">
+    </nav>
+</header>
+
+    <main>
+        
+            <label for="subPizza">Pizza</label>
+            <input type="radio" id="subPizza" name="sub" checked>
+
+            <label for="subPasta">Pasta</label>
+            <input type="radio" id="subPasta" name="sub">
+
+            <label for="subDrinks">Drinks</label>
+            <input type="radio" id="subDrinks" name="sub">
+
+            <label for="subChicken">Chicken</label>
+            <input type="radio" id="subChicken" name="sub">
+
+            <label for="subDessert">Dessert</label>
+            <input type="radio" id="subDessert" name="sub">
+
+    
+        <div id="pizzaMenu">
             <img class="pizza" src="/media/images/pizza/fourCheese.jpg" alt="fourCheese">
             <div>
                 <p class="name">Four Cheese</p>
@@ -109,10 +122,10 @@
                 <p class="description">Homemade pizza sauce, mozzarella, tomatoes, basil.</p>
                 <p>$15.99</p>
             </div>
-        </main>
+        </div>
 
 
-        <main id="pastaMenu">
+        <div id="pastaMenu">
             <img class="pasta" src="/media/images/pasta/AglioEOlio.jpg" alt="AglioEOlio">
             <div>
                 <p class="name">Aglio E Olio</p>
@@ -196,10 +209,10 @@
                 <p class="description">Pomodoro, meatballs.</p>
                 <p>$9.99</p>
             </div>
-        </main>
+        </div>
 
 
-        <main id="beverage">
+        <div id="drinksMenu">
             <h2>Smoothie</h2>
             <img class="drinks" src="/media/images/drinks/banana.jpg" alt="banana">
             <div>
@@ -251,26 +264,27 @@
                 <p class="name">Fanta</p>
                 <p>$2.49</p>
             </div>
-        </main>
+        </div>
 
 
-        <main id="chicken">
-            <img id="wings" src="/media/images/chicken/crispyWings.jpg" alt="crispyWings">
+        <div id="chickenMenu">
+            <img id="chicken" src="/media/images/chicken/crispyWings.jpg" alt="crispyWings">
             <div>
                 <p class="name">Crispy Chicken Wings</p>
                 <p class="description">Breaded with homemade seasoned bread crumb.</p>
                 <p>$12.99</p>
             </div>
-        </main>
+        </div>
 
 
-        <main id="dessert">
-            <img id="brownies" src="/media/images/desserts/brownies.jpg" alt="brownies">
+        <div id="dessertMenu">
+            <img id="dessert" src="/media/images/desserts/brownies.jpg" alt="brownies">
             <div>
                 <p class="name">Crispy Chicken Wings</p>
                 <p class="description">Breaded with homemade seasoned bread crumb.</p>
                 <p>$3.49</p>
             </div>
-        </main>
+        </div>
+    </main>
 </body>
 </html>

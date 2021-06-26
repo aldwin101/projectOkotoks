@@ -1,1 +1,20 @@
+@import 'variables';
+
 @import 'nav';
+
+* {
+    padding:0;
+    margin:0;
+}
+
+body {
+    background-color:#eedede;
+    height: 100vh;
+    width: 100vw;
+}
+
+#photo {
+    width: 100vw;
+    height: 100vh;
+    object-fit:cover;
+}

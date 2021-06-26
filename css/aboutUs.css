@@ -5,6 +5,81 @@
   text-decoration: none;
 }
 
+nav {
+  font-family: "Montserrat", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  height: 10vh;
+  z-index: 1;
+}
+
+nav #logo {
+  width: 60vw;
+}
+
+#menu {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eea39b;
+}
+
+li {
+  position: relative;
+  top: 10vh;
+}
+
+#menuButton:checked ~ div {
+  display: block;
+}
+
+#menuButton {
+  display: none;
+}
+
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+ul {
+  text-align: center;
+}
+
+ul li {
+  padding: 15px;
+}
+
+ul li a {
+  border-radius: 10px;
+  background-color: salmon;
+  -webkit-box-shadow: 5px 5px 5px 5px burlywood;
+          box-shadow: 5px 5px 5px 5px burlywood;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#burgerButton {
+  width: 15vw;
+}
+
 body {
   background-color: #eedede;
   display: -ms-grid;
@@ -15,82 +90,13 @@ body {
   height: 100%;
 }
 
-nav {
-  font-family: "Montserrat", sans-serif;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-  height: 10vh;
-}
-
-nav #menu {
-  display: none;
-  position: fixed;
-  top: 10vh;
-  height: 100vh;
-  width: 100vw;
-  background-color: #eea39b;
-}
-
-nav li {
-  position: relative;
-  top: 10vh;
-}
-
-nav #logo {
-  width: 60vw;
-}
-
-nav #menuButton:checked ~ div {
-  display: block;
-}
-
-nav #menuButton {
-  display: none;
-}
-
-nav label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-nav ul {
-  text-align: center;
-}
-
-nav ul li {
-  padding: 15px;
-}
-
-nav ul li a {
-  border-radius: 10px;
-  background-color: salmon;
-  -webkit-box-shadow: 5px 5px 5px 5px burlywood;
-          box-shadow: 5px 5px 5px 5px burlywood;
-  padding: 5px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav #burgerButton {
-  width: 15vw;
-}
-
 #text {
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   color: white;
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 1.2rem;
 }
 
