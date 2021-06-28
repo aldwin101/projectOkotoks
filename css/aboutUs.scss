@@ -3,26 +3,37 @@
 @import 'nav';
 
 body {
+    font-family: $websiteFont;
     background-color:#eedede;
     display: grid;
-    grid-template-rows: 1fr 9fr;
-    width: 100%;
-    height: 100%;
+    grid-template-rows: 2fr 15fr;
+    width: 100vw;
+    height: 100vh;
 }
 
-#text {
+#content {
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100vw;
+    row-gap: 5vh;
+    overflow-y: auto;
     font-family: $aboutFont;
     color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-    font-family: $aboutFont;
-    font-size: 1.2rem;
-}
-
-h1 {
-    text-align: center;
-    font-family: $websiteFont;
+    font-weight: bold;
+    text-align: justify;
+    
+    h1 {
+        text-align: center;
+        font-family: $websiteFont;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 #gallery {
@@ -34,7 +45,7 @@ h1 {
     padding: 5vw;
     justify-items: center;
     align-items: center;
-    overflow-y: auto;
+    overflow-x: auto;
     
 
     .photoGallery {
@@ -45,6 +56,5 @@ h1 {
 
 footer {
     text-align: center;
-    padding-top: 10vh;
-    padding-bottom: 2vh;
+    font-weight: normal;
 }

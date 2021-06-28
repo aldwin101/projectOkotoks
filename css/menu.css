@@ -1,4 +1,20 @@
 * {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .6fr 20fr;
+      grid-template-rows: .6fr 20fr;
+  background-color: #eedede;
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
   padding: 0;
   margin: 0;
   color: black;
@@ -9,97 +25,75 @@ nav {
   font-family: "Montserrat", sans-serif;
   display: -ms-grid;
   display: grid;
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
-  height: 10vh;
-  z-index: 1;
+  height: 12vh;
 }
 
 nav #logo {
-  width: 60vw;
+  width: 65vw;
 }
 
-#menu {
+nav #menu {
   display: none;
   position: fixed;
-  top: 10vh;
+  top: 12vh;
   height: 100vh;
   width: 100vw;
-  background-color: #eea39b;
+  background-color: rgba(238, 163, 155, 0.9);
+  z-index: 1;
 }
 
-li {
+nav li {
   position: relative;
   top: 10vh;
 }
 
-#menuButton:checked ~ div {
+nav #menuButton:checked ~ div {
   display: block;
 }
 
-#menuButton {
+nav #menuButton {
   display: none;
 }
 
-label {
+nav label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-ul {
+nav ul {
   text-align: center;
+  list-style-type: none;
 }
 
-ul li {
-  padding: 15px;
+nav ul li {
+  padding: 6vw;
 }
 
-ul li a {
+nav ul li a {
   border-radius: 10px;
-  background-color: salmon;
-  -webkit-box-shadow: 5px 5px 5px 5px burlywood;
-          box-shadow: 5px 5px 5px 5px burlywood;
-  padding: 5px;
-  font-size: 1.5rem;
+  background-color: black;
+  padding: 3vw;
+  color: white;
+  font-size: 8vw;
   font-weight: bold;
 }
 
-#burgerButton {
-  width: 15vw;
+nav #burgerButton {
+  width: 10vw;
 }
 
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: .6fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: .6fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-flow: row;
-  background-color: #eedede;
-  height: 100vh;
-  width: 100vw;
-}
-
-#sub {
-  width: 100vw;
-  padding-top: 2vh;
-  padding-bottom: 1vh;
-  text-align: center;
+nav #phone {
+  width: 12vw;
 }
 
 /*Pizza Menu*/
@@ -111,13 +105,13 @@ body {
 #pizzaMenu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   overflow-y: auto;
   display: none;
   position: relative;
-  top: 15vh;
-  height: 100vh;
+  top: 1.5vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -160,13 +154,13 @@ label {
 #pastaMenu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   overflow-y: auto;
   display: none;
   position: relative;
-  top: 15vh;
-  height: 100vh;
+  top: 1.5vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -209,13 +203,13 @@ label {
 #drinksMenu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   overflow-y: auto;
   display: none;
   position: relative;
-  top: 15vh;
-  height: 100vh;
+  top: 1.5vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -267,13 +261,13 @@ h2 {
 #chickenMenu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   overflow-y: auto;
   display: none;
   position: relative;
-  top: 15vh;
-  height: 100vh;
+  top: 1.5vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -288,9 +282,6 @@ img, div {
   display: grid;
   -ms-grid-columns: 1fr 3fr;
       grid-template-columns: 1fr 3fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100vw;
 }
 
@@ -314,13 +305,13 @@ label {
 #dessertMenu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   overflow-y: auto;
   display: none;
   position: relative;
-  top: 15vh;
-  height: 100vh;
+  top: 1.5vh;
+  height: 82vh;
   width: 100vw;
 }
 
@@ -360,26 +351,29 @@ label {
 
 .description {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 5vw;
-}
-
-main img {
-  margin-left: 2vw;
-}
-
-main div p {
-  margin-left: 3vw;
-}
-
-main {
-  position: fixed;
-  top: 15vh;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 main input, main label {
+  position: relative;
+  left: 7vw;
+  top: 1vh;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
   font-size: 5vw;
+  font-weight: bolder;
+  text-decoration: overline;
+  text-decoration: underline;
+}
+
+main img {
+  margin-left: 1vw;
+}
+
+main div p {
+  margin-left: 3vw;
+  margin-right: 1vw;
 }
 /*# sourceMappingURL=menu.css.map */

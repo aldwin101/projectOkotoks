@@ -9,100 +9,114 @@ nav {
   font-family: "Montserrat", sans-serif;
   display: -ms-grid;
   display: grid;
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
-  height: 10vh;
-  z-index: 1;
+  height: 12vh;
 }
 
 nav #logo {
-  width: 60vw;
+  width: 65vw;
 }
 
-#menu {
+nav #menu {
   display: none;
   position: fixed;
-  top: 10vh;
+  top: 12vh;
   height: 100vh;
   width: 100vw;
-  background-color: #eea39b;
+  background-color: rgba(238, 163, 155, 0.9);
+  z-index: 1;
 }
 
-li {
+nav li {
   position: relative;
   top: 10vh;
 }
 
-#menuButton:checked ~ div {
+nav #menuButton:checked ~ div {
   display: block;
 }
 
-#menuButton {
+nav #menuButton {
   display: none;
 }
 
-label {
+nav label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-ul {
+nav ul {
   text-align: center;
+  list-style-type: none;
 }
 
-ul li {
-  padding: 15px;
+nav ul li {
+  padding: 6vw;
 }
 
-ul li a {
+nav ul li a {
   border-radius: 10px;
-  background-color: salmon;
-  -webkit-box-shadow: 5px 5px 5px 5px burlywood;
-          box-shadow: 5px 5px 5px 5px burlywood;
-  padding: 5px;
-  font-size: 1.5rem;
+  background-color: black;
+  padding: 3vw;
+  color: white;
+  font-size: 8vw;
   font-weight: bold;
 }
 
-#burgerButton {
-  width: 15vw;
+nav #burgerButton {
+  width: 10vw;
+}
+
+nav #phone {
+  width: 12vw;
 }
 
 body {
+  font-family: "Montserrat", sans-serif;
   background-color: #eedede;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 9fr;
-      grid-template-rows: 1fr 9fr;
-  width: 100%;
-  height: 100%;
+  -ms-grid-rows: 2fr 15fr;
+      grid-template-rows: 2fr 15fr;
+  width: 100vw;
+  height: 100vh;
 }
 
-#text {
+#content {
+  position: relative;
+  top: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 100vw;
+  row-gap: 5vh;
+  overflow-y: auto;
   font-family: "Montserrat Alternates", sans-serif;
   color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: justify;
 }
 
-h1 {
+#content h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+#content p {
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #gallery {
@@ -118,7 +132,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 #gallery .photoGallery {
@@ -128,7 +142,6 @@ h1 {
 
 footer {
   text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 2vh;
+  font-weight: normal;
 }
 /*# sourceMappingURL=aboutUs.css.map */
