@@ -72,3 +72,70 @@ nav {
         width: 12vw;
     }
 }
+
+@media only screen and (min-width: 426px) {
+nav {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+    #logo {
+        width: 45vw;
+    }
+    
+    #burgerButton {
+        width: 7vw;
+    }
+
+    #phone {
+        display: none;
+    }
+    #menu {
+        height: 100vh;
+        width: 40vw;
+        background-color:rgba(238, 163, 155, 0.900);
+        background-size: 50vw;
+        z-index: 1;
+    }
+        ul {
+            text-align:center;
+            list-style-type: none;
+            
+            li {
+                padding: 4vw;
+                a {
+                border-radius: 10px;
+                background-color: black;
+                padding: 3vw;
+                color: white;
+                font-size: 3vw;
+                font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #burgerButton {
+        display: none;
+    }
+    
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: left;
+        align-items: center;
+        a {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        #logo {
+            width: 20vw;
+            position: relative;
+            left: 2vw;
+        }
+    }
+}

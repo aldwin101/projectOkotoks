@@ -96,6 +96,79 @@ nav #phone {
   width: 12vw;
 }
 
+@media only screen and (min-width: 426px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 7fr;
+        grid-template-columns: 1fr 7fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+  }
+  nav #logo {
+    width: 45vw;
+  }
+  nav #burgerButton {
+    width: 7vw;
+  }
+  nav #phone {
+    display: none;
+  }
+  nav #menu {
+    height: 100vh;
+    width: 40vw;
+    background-color: rgba(238, 163, 155, 0.9);
+    background-size: 50vw;
+    z-index: 1;
+  }
+  nav ul {
+    text-align: center;
+    list-style-type: none;
+  }
+  nav ul li {
+    padding: 4vw;
+  }
+  nav ul li a {
+    border-radius: 10px;
+    background-color: black;
+    padding: 3vw;
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #burgerButton {
+    display: none;
+  }
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav a {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  nav #logo {
+    width: 20vw;
+    position: relative;
+    left: 2vw;
+  }
+}
+
 #content {
   display: -ms-grid;
   display: grid;

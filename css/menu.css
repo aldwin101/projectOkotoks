@@ -7,8 +7,9 @@
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .6fr 20fr;
-      grid-template-rows: .6fr 20fr;
+  -ms-grid-rows: 2fr 15fr;
+      grid-template-rows: 2fr 15fr;
+  overflow-y: hidden;
   background-color: #eedede;
   height: 100vh;
   width: 100vw;
@@ -96,36 +97,96 @@ nav #phone {
   width: 12vw;
 }
 
+@media only screen and (min-width: 426px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 7fr;
+        grid-template-columns: 1fr 7fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+  }
+  nav #logo {
+    width: 45vw;
+  }
+  nav #burgerButton {
+    width: 7vw;
+  }
+  nav #phone {
+    display: none;
+  }
+  nav #menu {
+    height: 100vh;
+    width: 40vw;
+    background-color: rgba(238, 163, 155, 0.9);
+    background-size: 50vw;
+    z-index: 1;
+  }
+  nav ul {
+    text-align: center;
+    list-style-type: none;
+  }
+  nav ul li {
+    padding: 4vw;
+  }
+  nav ul li a {
+    border-radius: 10px;
+    background-color: black;
+    padding: 3vw;
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #burgerButton {
+    display: none;
+  }
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav a {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  nav #logo {
+    width: 20vw;
+    position: relative;
+    left: 2vw;
+  }
+}
+
 /*Pizza Menu*/
-.pizza {
-  border-radius: 10px;
-  width: 35vw;
-}
-
 #pizzaMenu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  overflow-y: auto;
   display: none;
-  position: relative;
-  top: 1.5vh;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
-}
-
-img, div {
-  position: relative;
-  top: 0;
 }
 
 #subPizza:checked ~ #pizzaMenu {
   display: block;
+  top: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  overflow-y: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -146,20 +207,8 @@ label {
 
 /**Pizza menu end**/
 /**Pasta menu**/
-.pasta {
-  border-radius: 10px;
-  width: 35vw;
-}
-
 #pastaMenu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  overflow-y: auto;
   display: none;
-  position: relative;
-  top: 1.5vh;
   height: 82vh;
   width: 100vw;
 }
@@ -171,10 +220,14 @@ img, div {
 
 #subPasta:checked ~ #pastaMenu {
   display: block;
+  top: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  overflow-y: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -195,20 +248,8 @@ label {
 
 /**Pasta menu end**/
 /*Drinks*/
-.drinks {
-  border-radius: 10px;
-  width: 35vw;
-}
-
 #drinksMenu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  overflow-y: auto;
   display: none;
-  position: relative;
-  top: 1.5vh;
   height: 82vh;
   width: 100vw;
 }
@@ -220,10 +261,14 @@ img, div {
 
 #subDrinks:checked ~ #drinksMenu {
   display: block;
+  top: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  overflow-y: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -253,20 +298,8 @@ h2 {
 
 /*Drinks end*/
 /*Chicken*/
-#chicken {
-  border-radius: 10px;
-  width: 35vw;
-}
-
 #chickenMenu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  overflow-y: auto;
   display: none;
-  position: relative;
-  top: 1.5vh;
   height: 82vh;
   width: 100vw;
 }
@@ -278,11 +311,19 @@ img, div {
 
 #subChicken:checked ~ #chickenMenu {
   display: block;
+  top: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  overflow-y: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
+  row-gap: 2vh;
 }
 
 #subChicken {
@@ -297,20 +338,8 @@ label {
 }
 
 /*Dessert*/
-#dessert {
-  border-radius: 10px;
-  width: 35vw;
-}
-
 #dessertMenu {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  overflow-y: auto;
   display: none;
-  position: relative;
-  top: 1.5vh;
   height: 82vh;
   width: 100vw;
 }
@@ -322,14 +351,19 @@ img, div {
 
 #subDessert:checked ~ #dessertMenu {
   display: block;
+  top: 3vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  overflow-y: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  row-gap: 2vh;
 }
 
 #subDessert {
@@ -349,22 +383,29 @@ label {
   font-size: 7vw;
 }
 
-.description {
+.description, .price {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 4vw;
   font-weight: bold;
 }
 
-main input, main label {
-  position: relative;
-  left: 7vw;
-  top: 1vh;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+.price {
   font-size: 5vw;
   font-weight: bolder;
-  text-decoration: overline;
+}
+
+.menuPhoto {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+main input, main label {
+  position: relative;
+  left: 6vw;
+  top: 1vh;
+  padding: 0 2vw;
+  font-size: 4vw;
+  font-weight: bolder;
   text-decoration: underline;
 }
 
@@ -375,5 +416,20 @@ main img {
 main div p {
   margin-left: 3vw;
   margin-right: 1vw;
+}
+
+@media only screen and (min-width: 426px) {
+  .menuPhoto {
+    width: 20vw;
+  }
+  .name {
+    font-size: 4vw;
+  }
+  .description, .price {
+    font-size: 2.5vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
