@@ -2,6 +2,7 @@
 
 body {
     font-family: $websiteFont;
+    font-weight: bold;
     background-color:#eedede;
     display: grid;
     grid-template-rows: 2fr 15fr;
@@ -39,6 +40,7 @@ main {
 
 footer {
     text-align: center;
+    font-weight: normal;
 }
 
 @media only screen and (min-width: 769px) {

@@ -16,6 +16,7 @@ body {
 }
 
 * {
+  font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
   color: black;
@@ -41,6 +42,26 @@ nav #logo {
   width: 65vw;
 }
 
+nav #phnNmbr {
+  background-color: rgba(226, 224, 224, 0.5);
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  font-size: 2.5vh;
+  font-weight: bolder;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 2vh .5vh;
+  border-radius: 3vh 0 0 3vh;
+  z-index: 1;
+}
+
+nav #phnNmbr img {
+  width: 2.5vh;
+}
+
 nav #menu {
   display: none;
   position: fixed;
@@ -49,11 +70,6 @@ nav #menu {
   width: 100vw;
   background-color: rgba(238, 163, 155, 0.9);
   z-index: 1;
-}
-
-nav li {
-  position: relative;
-  top: 10vh;
 }
 
 nav #menuButton:checked ~ div {
@@ -153,20 +169,55 @@ nav #phone {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    justify-items: left;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-items: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
   }
   nav a {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
   }
   nav #logo {
     width: 20vw;
     position: relative;
-    left: 2vw;
+    top: 2vh;
+    left: 1vw;
+  }
+  nav #menu {
+    display: block;
+    position: relative;
+    top: 0;
+    background: none;
+    height: 0px;
+  }
+  nav #menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 5vh;
+            column-gap: 5vh;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav #menu ul li {
+    padding: 0;
+    margin: 0;
+  }
+  nav #menu ul li a {
+    background: none;
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -209,7 +260,7 @@ label {
 /**Pasta menu**/
 #pastaMenu {
   display: none;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
 }
 
@@ -250,7 +301,7 @@ label {
 /*Drinks*/
 #drinksMenu {
   display: none;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
 }
 
@@ -289,7 +340,7 @@ label {
 
 h2 {
   text-align: center;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 8vw;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -300,7 +351,7 @@ h2 {
 /*Chicken*/
 #chickenMenu {
   display: none;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
 }
 
@@ -340,7 +391,7 @@ label {
 /*Dessert*/
 #dessertMenu {
   display: none;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
 }
 
@@ -384,7 +435,7 @@ label {
 }
 
 .description, .price {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 4vw;
   font-weight: bold;
 }
@@ -399,21 +450,21 @@ label {
   width: 35vw;
 }
 
-main input, main label {
+#content input, #content label {
   position: relative;
   left: 6vw;
-  top: 1vh;
+  top: 3vh;
   padding: 0 2vw;
   font-size: 4vw;
   font-weight: bolder;
   text-decoration: underline;
 }
 
-main img {
+#content img {
   margin-left: 1vw;
 }
 
-main div p {
+#content div p {
   margin-left: 3vw;
   margin-right: 1vw;
 }
@@ -422,14 +473,51 @@ main div p {
   .menuPhoto {
     width: 20vw;
   }
-  .name {
+  .name, h2 {
     font-size: 4vw;
   }
   .description, .price {
     font-size: 2.5vw;
   }
-  h2 {
-    font-size: 4vw;
+}
+
+@media only screen and (min-width: 769px) {
+  #subPizza:checked ~ #pizzaMenu, #subPasta:checked ~ #pastaMenu, #subDrinks:checked ~ #drinksMenu, #subChicken:checked ~ #chickenMenu, #subDessert:checked ~ #dessertMenu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4fr 1fr 4fr;
+        grid-template-columns: 1fr 4fr 1fr 4fr;
+    background-color: #ecc0c0;
+  }
+  #subPizza:checked ~ #pizzaMenu .menuPhoto, #subPasta:checked ~ #pastaMenu .menuPhoto, #subDrinks:checked ~ #drinksMenu .menuPhoto, #subChicken:checked ~ #chickenMenu .menuPhoto, #subDessert:checked ~ #dessertMenu .menuPhoto {
+    width: 15vw;
+  }
+  #subPizza:checked ~ #pizzaMenu .name, #subPasta:checked ~ #pastaMenu .name, #subDrinks:checked ~ #drinksMenu .name, #subChicken:checked ~ #chickenMenu .name, #subDessert:checked ~ #dessertMenu .name {
+    font-size: 2rem;
+  }
+  #subPizza:checked ~ #pizzaMenu .description, #subPasta:checked ~ #pastaMenu .description, #subDrinks:checked ~ #drinksMenu .description, #subChicken:checked ~ #chickenMenu .description, #subDessert:checked ~ #dessertMenu .description {
+    font-size: 1rem;
+  }
+  #subPizza:checked ~ #pizzaMenu .price, #subPasta:checked ~ #pastaMenu .price, #subDrinks:checked ~ #drinksMenu .price, #subChicken:checked ~ #chickenMenu .price, #subDessert:checked ~ #dessertMenu .price {
+    font-size: 1rem;
+  }
+  #subPizza:checked ~ #pizzaMenu #text1, #subPizza:checked ~ #pizzaMenu #text2, #subPasta:checked ~ #pastaMenu #text1, #subPasta:checked ~ #pastaMenu #text2, #subDrinks:checked ~ #drinksMenu #text1, #subDrinks:checked ~ #drinksMenu #text2, #subChicken:checked ~ #chickenMenu #text1, #subChicken:checked ~ #chickenMenu #text2, #subDessert:checked ~ #dessertMenu #text1, #subDessert:checked ~ #dessertMenu #text2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    font-size: 3rem;
+  }
+  #content input, #content label {
+    position: relative;
+    left: 25vw;
+    font-size: 2vw;
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 5vh;
+  }
+  input[type=radio]:checked + label {
+    background-color: #ecc0c0;
+    border-radius: 1vw;
   }
 }
 /*# sourceMappingURL=menu.css.map */

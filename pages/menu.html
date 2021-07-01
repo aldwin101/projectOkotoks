@@ -7,7 +7,7 @@
     <title>Menu | Okotoks Pizza</title>
     <link rel="icon" href="/media/images/title.png" type="image">
     <link rel="stylesheet" href="/css/menu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,6 +17,9 @@
             <input type="checkbox" id="menuButton">
             <a href="index.html"><img id="logo" src="/media/images/websiteLogo.png" alt="websiteLogo"></a>
             <a href="tel:403-555-5555"><img id="phone" src="/media/images/phone.png" alt="phoneIcon"></a>
+            <div id="phnNmbr">
+                <a href="tel:403-555-5555"><img src="/media/images/smartphone.png" alt="phone"> 403 555 5555</a>
+            </div>
             
             <div id="menu">
                 <ul>
@@ -30,20 +33,21 @@
     </header>
 
     <main id="content">
-            <label for="subPizza">Pizza</label>
+            
             <input type="radio" id="subPizza" name="sub" checked>
+            <label for="subPizza">Pizza</label>
 
-            <label for="subPasta">Pasta</label>
             <input type="radio" id="subPasta" name="sub">
+            <label for="subPasta">Pasta</label>
 
-            <label for="subDrinks">Drinks</label>
             <input type="radio" id="subDrinks" name="sub">
+            <label for="subDrinks">Drinks</label>
 
-            <label for="subChicken">Chicken</label>
             <input type="radio" id="subChicken" name="sub">
+            <label for="subChicken">Chicken</label>
 
-            <label for="subDessert">Dessert</label>
             <input type="radio" id="subDessert" name="sub">
+            <label for="subDessert">Dessert</label>
 
     
         <div id="pizzaMenu">
@@ -214,7 +218,7 @@
 
 
         <div id="drinksMenu">
-            <h2>Smoothies</h2>
+            <h2 id="text1">Smoothies</h2>
             <img class="menuPhoto" src="/media/images/drinks/banana.jpg" alt="banana">
             <div>
                     <p class="name">Banana</p>
@@ -238,7 +242,7 @@
                 <p class="price">$3.99</p>
             </div>
 
-            <h2>Sodas</h2>
+            <h2 id="text2">Sodas</h2>
             <img class="menuPhoto" src="/media/images/drinks/7up.jpg" alt="7up">
             <div>
                 <p class="name">7up</p>

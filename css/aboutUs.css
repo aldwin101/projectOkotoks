@@ -1,4 +1,5 @@
 * {
+  font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
   color: black;
@@ -24,6 +25,26 @@ nav #logo {
   width: 65vw;
 }
 
+nav #phnNmbr {
+  background-color: rgba(226, 224, 224, 0.5);
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  font-size: 2.5vh;
+  font-weight: bolder;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 2vh .5vh;
+  border-radius: 3vh 0 0 3vh;
+  z-index: 1;
+}
+
+nav #phnNmbr img {
+  width: 2.5vh;
+}
+
 nav #menu {
   display: none;
   position: fixed;
@@ -32,11 +53,6 @@ nav #menu {
   width: 100vw;
   background-color: rgba(238, 163, 155, 0.9);
   z-index: 1;
-}
-
-nav li {
-  position: relative;
-  top: 10vh;
 }
 
 nav #menuButton:checked ~ div {
@@ -136,20 +152,55 @@ nav #phone {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    justify-items: left;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-items: normal;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
   }
   nav a {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
   }
   nav #logo {
     width: 20vw;
     position: relative;
-    left: 2vw;
+    top: 2vh;
+    left: 1vw;
+  }
+  nav #menu {
+    display: block;
+    position: relative;
+    top: 0;
+    background: none;
+    height: 0px;
+  }
+  nav #menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 5vh;
+            column-gap: 5vh;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav #menu ul li {
+    padding: 0;
+    margin: 0;
+  }
+  nav #menu ul li a {
+    background: none;
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -172,7 +223,7 @@ body {
   width: 100vw;
   row-gap: 5vh;
   overflow-y: auto;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Raleway", sans-serif;
   color: white;
   font-weight: bold;
   text-align: justify;

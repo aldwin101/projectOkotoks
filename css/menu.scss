@@ -51,7 +51,7 @@ label {
 /**Pasta menu**/
 #pastaMenu {
     display: none;
-    height: 82vh;
+    height: 83vh;
     width: 100vw;
 }
 
@@ -85,7 +85,7 @@ label {
 /*Drinks*/
 #drinksMenu {
     display: none;
-    height: 82vh;
+    height: 83vh;
     width: 100vw;
 }
 
@@ -126,7 +126,7 @@ h2 {
 /*Chicken*/
 #chickenMenu {
     display: none;
-    height: 82vh;
+    height: 83vh;
     width: 100vw;
 }
 
@@ -159,7 +159,7 @@ label {
 /*Dessert*/
 #dessertMenu {
     display: none;
-    height: 82vh;
+    height: 83vh;
     width: 100vw;
 }
 
@@ -211,11 +211,11 @@ label {
     width: 35vw;
 }
 
-main {
+#content {
     input, label {
     position: relative;
     left: 6vw;
-    top: 1vh;
+    top: 3vh;
     padding: 0 2vw;
     font-size: 4vw;
     font-weight: bolder;
@@ -236,14 +236,53 @@ main {
     .menuPhoto {
         width: 20vw;
     }
-    .name {
+    .name, h2 {
         font-size: 4vw;
     }
     .description, .price {
         font-size: 2.5vw;
     }
-    h2 {
-        font-size: 4vw;
-    }
 }
 
+@media only screen and (min-width: 769px) {
+    #subPizza:checked ~ #pizzaMenu, #subPasta:checked ~ #pastaMenu, #subDrinks:checked ~ #drinksMenu, #subChicken:checked ~ #chickenMenu, #subDessert:checked ~ #dessertMenu {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr 4fr;
+        background-color: #ecc0c0;
+        .menuPhoto {
+            width: 15vw;
+        }
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .price {
+            font-size: 1rem;
+        }
+
+        #text1, #text2 {
+            grid-column: 1 / 5;
+            font-size: 3rem;
+        }
+    }
+    #content{
+        input, label {
+            position: relative;
+            left: 25vw;
+            font-size: 2vw;
+            cursor:pointer;
+            text-decoration: none;
+            padding-bottom: 5vh;
+        }
+    }
+
+    input[type=radio]:checked + label {
+    background-color: #ecc0c0;
+    border-radius: 1vw;
+    }
+} 
