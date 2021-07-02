@@ -13,14 +13,14 @@ body {
 
 #content {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
     width: 100vw;
     row-gap: 5vh;
     overflow-y: auto;
     font-family: $aboutFont;
     color: white;
     font-weight: bold;
-    text-align: justify;
+    
     
     h1 {
         text-align: center;
@@ -32,44 +32,56 @@ body {
         margin-left: 20px;
         margin-right: 20px;
         line-height: 4vh;
-        margin-bottom: 3vh;
+    }
+    footer {
+        p {
+        font-weight: normal;
+        text-align: center;
+        font-size: 3vw;
+        }
     }
 }
 
 #gallery {
-    background-color: black;
+    background-color: rgb(44, 44, 44);
     height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10vw;
-    padding: 5vw;
     justify-items: center;
     align-items: center;
+    max-width: 100%;
     overflow-x: auto;
-    
 
     .photoGallery {
         width: 70vw;
-        border-radius: 5px;
+        padding: 0 10vw;
     }
 }
 
-footer {
-    text-align: center;
-    font-weight: normal;
-}
+
 
 @media only screen and (min-width: 426px) {
     #content {
-        h1, p {
+        h1 {
         line-height: 5vh;
         margin-bottom: 3vh;
         }
         h1 {
             font-family: $websiteFont;
         }
-        .photoGallery {
-            width: 40vw;
+        #gallery {
+            height: 60vh;
+            .photoGallery {
+                width: 40vw;
+                padding: 0 5vw;
+            }
+        }
+        footer {
+            p {
+                font-weight: normal;
+                text-align: center;
+                font-size: 2vw;
+            }
         }
     }
 }
@@ -80,13 +92,23 @@ footer {
             padding-top: 5vh;
             font-size: 8vh;
         }
-        p {
-            margin: 2vw 10vw;
+        div {
+            p {
+                line-height: 5vh;
+                margin: 2vw 10vw;
+            }
         }
+
         #gallery {
-            height: 60vh;
-            img {
+            height: 80vh;
+            .photoGallery {
                 width: 30vw;
+            }
+        }
+        footer {
+            p {
+                font-weight: normal;
+                font-size: 1vw;
             }
         }
     }

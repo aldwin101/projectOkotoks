@@ -23,6 +23,26 @@ body {
   text-decoration: none;
 }
 
+header #phnNmbr {
+  background-color: rgba(226, 224, 224, 0.5);
+  position: fixed;
+  top: 20vh;
+  right: 0;
+  font-size: 2.5vh;
+  font-weight: bolder;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 2vh .5vh;
+  border-radius: 3vh 0 0 3vh;
+  z-index: 1;
+}
+
+header #phnNmbr img {
+  width: 2.5vh;
+}
+
 nav {
   font-family: "Montserrat", sans-serif;
   display: -ms-grid;
@@ -42,26 +62,6 @@ nav #logo {
   width: 65vw;
 }
 
-nav #phnNmbr {
-  background-color: rgba(226, 224, 224, 0.5);
-  position: absolute;
-  top: 20vh;
-  right: 0;
-  font-size: 2.5vh;
-  font-weight: bolder;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-orientation: upright;
-  padding: 2vh .5vh;
-  border-radius: 3vh 0 0 3vh;
-  z-index: 1;
-}
-
-nav #phnNmbr img {
-  width: 2.5vh;
-}
-
 nav #menu {
   display: none;
   position: fixed;
@@ -69,11 +69,19 @@ nav #menu {
   height: 100vh;
   width: 100vw;
   background-color: rgba(238, 163, 155, 0.9);
-  z-index: 1;
+  z-index: 2;
 }
 
 nav #menuButton:checked ~ div {
   display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav #menuButton {
@@ -90,6 +98,9 @@ nav label {
 nav ul {
   text-align: center;
   list-style-type: none;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
 }
 
 nav ul li {
@@ -101,7 +112,7 @@ nav ul li a {
   background-color: black;
   padding: 3vw;
   color: white;
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: bold;
 }
 
@@ -113,35 +124,42 @@ nav #phone {
   width: 12vw;
 }
 
+nav #social {
+  text-align: center;
+}
+
+nav #social img {
+  width: 8vw;
+}
+
 @media only screen and (min-width: 426px) {
   nav {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 7fr;
         grid-template-columns: 1fr 7fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    justify-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
   }
   nav #logo {
-    width: 45vw;
+    width: 40vw;
   }
   nav #burgerButton {
-    width: 7vw;
+    width: 5vw;
   }
   nav #phone {
     display: none;
   }
+  nav #social img {
+    width: 2vw;
+  }
   nav #menu {
-    height: 100vh;
-    width: 40vw;
-    background-color: rgba(238, 163, 155, 0.9);
-    background-size: 50vw;
-    z-index: 1;
+    width: 30vw;
   }
   nav ul {
     text-align: center;
@@ -153,10 +171,17 @@ nav #phone {
   nav ul li a {
     border-radius: 10px;
     background-color: black;
-    padding: 3vw;
+    padding: 2vw;
     color: white;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: bold;
+  }
+  header #phnNmbr {
+    font-size: 3.5vh;
+    pointer-events: none;
+  }
+  header nav #click {
+    pointer-events: none;
   }
 }
 
@@ -182,6 +207,18 @@ nav #phone {
     -ms-grid-row-span: 2;
     grid-row: 1 / 3;
   }
+  nav #social {
+    position: fixed;
+    top: 2.5vh;
+    right: 1vw;
+  }
+  nav #social p {
+    color: white;
+    font-size: 1vw;
+  }
+  nav #social img {
+    width: 2vw;
+  }
   nav #logo {
     width: 20vw;
     position: relative;
@@ -203,15 +240,26 @@ nav #phone {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-column-gap: 5vh;
-            column-gap: 5vh;
+    -webkit-column-gap: 3vh;
+            column-gap: 3vh;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 6vh;
   }
   nav #menu ul li {
     padding: 0;
     margin: 0;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+  }
+  nav #menu ul li:hover {
+    background-color: rgba(223, 194, 194, 0.7);
+    border-radius: 7px 0px 7px 0px;
   }
   nav #menu ul li a {
     background: none;
@@ -219,245 +267,30 @@ nav #phone {
     padding: 0;
     margin: 0;
   }
+  nav #menu ul li a:hover {
+    color: black;
+  }
+  header #phnNmbr {
+    font-size: 3.5vh;
+    pointer-events: none;
+  }
+  header nav .click {
+    pointer-events: none;
+  }
+  header nav #logo {
+    pointer-events: visible;
+  }
 }
 
-/*Pizza Menu*/
-#pizzaMenu {
-  display: none;
-  height: 83vh;
-  width: 100vw;
-}
-
-#subPizza:checked ~ #pizzaMenu {
-  display: block;
-  top: 3vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  overflow-y: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  row-gap: 2vh;
-}
-
-#subPizza {
-  display: none;
-}
-
-label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/**Pizza menu end**/
-/**Pasta menu**/
-#pastaMenu {
-  display: none;
-  height: 83vh;
-  width: 100vw;
-}
-
-img, div {
-  position: relative;
-  top: 0;
-}
-
-#subPasta:checked ~ #pastaMenu {
-  display: block;
-  top: 3vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  overflow-y: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  row-gap: 2vh;
-}
-
-#subPasta {
-  display: none;
-}
-
-label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/**Pasta menu end**/
-/*Drinks*/
-#drinksMenu {
-  display: none;
-  height: 83vh;
-  width: 100vw;
-}
-
-img, div {
-  position: relative;
-  top: 0;
-}
-
-#subDrinks:checked ~ #drinksMenu {
-  display: block;
-  top: 3vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  overflow-y: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  row-gap: 2vh;
-}
-
-#subDrinks {
-  display: none;
-}
-
-label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-h2 {
+#content {
   text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 8vw;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-}
-
-/*Drinks end*/
-/*Chicken*/
-#chickenMenu {
-  display: none;
-  height: 83vh;
-  width: 100vw;
-}
-
-img, div {
-  position: relative;
-  top: 0;
-}
-
-#subChicken:checked ~ #chickenMenu {
-  display: block;
-  top: 3vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  overflow-y: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  row-gap: 2vh;
-}
-
-#subChicken {
-  display: none;
-}
-
-label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/*Dessert*/
-#dessertMenu {
-  display: none;
-  height: 83vh;
-  width: 100vw;
-}
-
-img, div {
-  position: relative;
-  top: 0;
-}
-
-#subDessert:checked ~ #dessertMenu {
-  display: block;
-  top: 3vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  overflow-y: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100vw;
-  row-gap: 2vh;
-}
-
-#subDessert {
-  display: none;
-}
-
-label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-/*Dessert end*/
-.name {
-  font-weight: bolder;
-  font-size: 7vw;
-}
-
-.description, .price {
-  font-family: "Raleway", sans-serif;
-  font-size: 4vw;
-  font-weight: bold;
-}
-
-.price {
-  font-size: 5vw;
-  font-weight: bolder;
-}
-
-.menuPhoto {
-  border-radius: 10px;
-  width: 35vw;
 }
 
 #content input, #content label {
   position: relative;
-  left: 6vw;
-  top: 3vh;
-  padding: 0 2vw;
-  font-size: 4vw;
+  top: 2vh;
+  font-size: 5vw;
   font-weight: bolder;
-  text-decoration: underline;
 }
 
 #content img {
@@ -469,55 +302,187 @@ label {
   margin-right: 1vw;
 }
 
+#content #pizzaMenu, #content #pastaMenu, #content #drinksMenu, #content #chickenMenu, #content #dessertMenu {
+  display: none;
+  height: 75vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+}
+
+#content #pizzaMenu p, #content #pastaMenu p, #content #drinksMenu p, #content #chickenMenu p, #content #dessertMenu p {
+  text-align: left;
+}
+
+#content #subPizza:checked ~ #pizzaMenu,
+#content #subPasta:checked ~ #pastaMenu,
+#content #subDrinks:checked ~ #drinksMenu,
+#content #subChicken:checked ~ #chickenMenu,
+#content #subDessert:checked ~ #dessertMenu {
+  display: block;
+  top: 3vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: auto;
+  width: 100vw;
+  row-gap: 2vh;
+  padding-top: 2vh;
+}
+
+#content #subPizza, #content #subPasta, #content #subDrinks, #content #subChicken, #content #subDessert {
+  display: none;
+}
+
+#content label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#content h2 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 6vw;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+#content .name {
+  font-weight: bolder;
+  font-size: 6vw;
+}
+
+#content .description, #content .price {
+  font-family: "Raleway", sans-serif;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#content .price {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+#content .menuPhoto {
+  border-radius: 10px;
+  width: 35vw;
+}
+
+footer p {
+  font-weight: normal;
+  text-align: center;
+  font-size: 3vw;
+}
+
 @media only screen and (min-width: 426px) {
-  .menuPhoto {
+  #content .menuPhoto {
     width: 20vw;
   }
-  .name, h2 {
+  #content .name, #content h2 {
     font-size: 4vw;
+    text-align: left;
   }
-  .description, .price {
-    font-size: 2.5vw;
+  #content .description, #content .price {
+    font-size: 3vw;
+  }
+  #content input, #content label {
+    font-size: 4vw;
+    padding: 0 1vw;
+  }
+  #content #pizzaMenu, #content #pastaMenu, #content #drinksMenu, #content #chickenMenu, #content #dessertMenu {
+    height: 72vh;
+  }
+  footer p {
+    font-weight: normal;
+    text-align: center;
+    font-size: 2vw;
   }
 }
 
 @media only screen and (min-width: 769px) {
-  #subPizza:checked ~ #pizzaMenu, #subPasta:checked ~ #pastaMenu, #subDrinks:checked ~ #drinksMenu, #subChicken:checked ~ #chickenMenu, #subDessert:checked ~ #dessertMenu {
+  #content #subPizza:checked ~ #pizzaMenu,
+  #content #subPasta:checked ~ #pastaMenu,
+  #content #subDrinks:checked ~ #drinksMenu,
+  #content #subChicken:checked ~ #chickenMenu,
+  #content #subDessert:checked ~ #dessertMenu {
     display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     -ms-grid-columns: 1fr 4fr 1fr 4fr;
         grid-template-columns: 1fr 4fr 1fr 4fr;
+    overflow-y: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    row-gap: 2vh;
     background-color: #ecc0c0;
   }
-  #subPizza:checked ~ #pizzaMenu .menuPhoto, #subPasta:checked ~ #pastaMenu .menuPhoto, #subDrinks:checked ~ #drinksMenu .menuPhoto, #subChicken:checked ~ #chickenMenu .menuPhoto, #subDessert:checked ~ #dessertMenu .menuPhoto {
+  #content #subPizza:checked ~ #pizzaMenu .menuPhoto,
+  #content #subPasta:checked ~ #pastaMenu .menuPhoto,
+  #content #subDrinks:checked ~ #drinksMenu .menuPhoto,
+  #content #subChicken:checked ~ #chickenMenu .menuPhoto,
+  #content #subDessert:checked ~ #dessertMenu .menuPhoto {
     width: 15vw;
   }
-  #subPizza:checked ~ #pizzaMenu .name, #subPasta:checked ~ #pastaMenu .name, #subDrinks:checked ~ #drinksMenu .name, #subChicken:checked ~ #chickenMenu .name, #subDessert:checked ~ #dessertMenu .name {
-    font-size: 2rem;
+  #content #subPizza:checked ~ #pizzaMenu .name,
+  #content #subPasta:checked ~ #pastaMenu .name,
+  #content #subDrinks:checked ~ #drinksMenu .name,
+  #content #subChicken:checked ~ #chickenMenu .name,
+  #content #subDessert:checked ~ #dessertMenu .name {
+    font-size: 1.5rem;
   }
-  #subPizza:checked ~ #pizzaMenu .description, #subPasta:checked ~ #pastaMenu .description, #subDrinks:checked ~ #drinksMenu .description, #subChicken:checked ~ #chickenMenu .description, #subDessert:checked ~ #dessertMenu .description {
+  #content #subPizza:checked ~ #pizzaMenu .description, #content #subPizza:checked ~ #pizzaMenu .price,
+  #content #subPasta:checked ~ #pastaMenu .description,
+  #content #subPasta:checked ~ #pastaMenu .price,
+  #content #subDrinks:checked ~ #drinksMenu .description,
+  #content #subDrinks:checked ~ #drinksMenu .price,
+  #content #subChicken:checked ~ #chickenMenu .description,
+  #content #subChicken:checked ~ #chickenMenu .price,
+  #content #subDessert:checked ~ #dessertMenu .description,
+  #content #subDessert:checked ~ #dessertMenu .price {
     font-size: 1rem;
   }
-  #subPizza:checked ~ #pizzaMenu .price, #subPasta:checked ~ #pastaMenu .price, #subDrinks:checked ~ #drinksMenu .price, #subChicken:checked ~ #chickenMenu .price, #subDessert:checked ~ #dessertMenu .price {
-    font-size: 1rem;
-  }
-  #subPizza:checked ~ #pizzaMenu #text1, #subPizza:checked ~ #pizzaMenu #text2, #subPasta:checked ~ #pastaMenu #text1, #subPasta:checked ~ #pastaMenu #text2, #subDrinks:checked ~ #drinksMenu #text1, #subDrinks:checked ~ #drinksMenu #text2, #subChicken:checked ~ #chickenMenu #text1, #subChicken:checked ~ #chickenMenu #text2, #subDessert:checked ~ #dessertMenu #text1, #subDessert:checked ~ #dessertMenu #text2 {
+  #content #subPizza:checked ~ #pizzaMenu #text1, #content #subPizza:checked ~ #pizzaMenu #text2,
+  #content #subPasta:checked ~ #pastaMenu #text1,
+  #content #subPasta:checked ~ #pastaMenu #text2,
+  #content #subDrinks:checked ~ #drinksMenu #text1,
+  #content #subDrinks:checked ~ #drinksMenu #text2,
+  #content #subChicken:checked ~ #chickenMenu #text1,
+  #content #subChicken:checked ~ #chickenMenu #text2,
+  #content #subDessert:checked ~ #dessertMenu #text1,
+  #content #subDessert:checked ~ #dessertMenu #text2 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-column: 1 / 5;
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-top: 1vh;
   }
   #content input, #content label {
     position: relative;
-    left: 25vw;
+    left: 2vw;
     font-size: 2vw;
     cursor: pointer;
     text-decoration: none;
-    padding-bottom: 5vh;
+    padding: 1vh;
+    border-radius: 12px 12px 0px 0px;
   }
-  input[type=radio]:checked + label {
+  #content input[type=radio]:checked + label {
     background-color: #ecc0c0;
-    border-radius: 1vw;
+  }
+  footer p {
+    font-weight: normal;
+    font-size: 1vw;
   }
 }
 /*# sourceMappingURL=menu.css.map */

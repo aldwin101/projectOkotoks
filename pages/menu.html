@@ -15,21 +15,28 @@
         <nav>
             <label for="menuButton"><img id="burgerButton" src="/media/images/menuButton.png" alt="menuButton"></label>
             <input type="checkbox" id="menuButton">
-            <a href="index.html"><img id="logo" src="/media/images/websiteLogo.png" alt="websiteLogo"></a>
-            <a href="tel:403-555-5555"><img id="phone" src="/media/images/phone.png" alt="phoneIcon"></a>
-            <div id="phnNmbr">
-                <a href="tel:403-555-5555"><img src="/media/images/smartphone.png" alt="phone"> 403 555 5555</a>
-            </div>
-            
+            <a class="click" href="/index.html"><img id="logo" src="/media/images/websiteLogo.png" alt="websiteLogo"></a>
+            <a class="click" href="tel:403-555-5555"><img id="phone" src="/media/images/phone.png" alt="phoneIcon"></a>
+
             <div id="menu">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li class="btn"><a href="/index.html">Home</a></li>
                     <li><a href="/pages/menu.html">Menu</a></li>
                     <li><a href="/pages/aboutUs.html">About Us</a></li>
                     <li><a href="/pages/contactUs.html">Contact Us</a></li>
                 </ul>
+
+                <div id="social">
+                    <p>Follow us on:</p>
+                        <a href="https://facebook.com" target="_blank"><img src="/media/images/socmed/facebook.png" alt="facebooLogo"></a>
+                        <a href="https://instagram.com" target="_blank"><img src="/media/images/socmed/instagram.png" alt="instagramLogo"></a>
+                        <a href="https://twitter.com" target="_blank"><img src="/media/images/socmed/twitter.png" alt="twitterLogo"></a>
+                </div>
             </div>
         </nav>
+        <div id="phnNmbr">
+            <a href="tel:403-555-5555"><img src="/media/images/smartphone.png" alt="phone"> 403 555 5555</a>
+        </div>
     </header>
 
     <main id="content">
@@ -290,6 +297,8 @@
             </div>
         </div>
     </main>
-    
+    <footer>
+        <p>© 2021. All rights reserved.</p>
+    </footer>
 </body>
 </html>
