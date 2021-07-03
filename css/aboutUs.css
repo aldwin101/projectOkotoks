@@ -1,3 +1,14 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eedede;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 15fr;
+      grid-template-rows: 2fr 15fr;
+  width: 100vw;
+  height: 100vh;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -263,17 +274,6 @@ nav #social img {
   header nav #logo {
     pointer-events: visible;
   }
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #eedede;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 2fr 15fr;
-      grid-template-rows: 2fr 15fr;
-  width: 100vw;
-  height: 100vh;
 }
 
 #content {

@@ -1,7 +1,5 @@
 @import 'variables';
 
-@import 'nav';
-
 body {
     font-family: $websiteFont;
     background-color:#eedede;
@@ -10,6 +8,8 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+@import 'nav';
 
 #content {
     display: grid;
