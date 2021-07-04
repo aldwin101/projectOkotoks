@@ -1,5 +1,6 @@
 @import 'variables';
 
+/* ↓↓↓ Mobile query*/
 body {
     font-family: $websiteFont;
     background-color:#eedede;
@@ -28,10 +29,11 @@ body {
         margin-bottom: 10px;
     }
     p {
+        font-weight: normal;
         text-align: justify;
-        font-size: 1rem;
+        font-size: 5vw;
         margin: 5vw 10vw;
-        line-height: 4vh;
+        line-height: 4vh; /*adjust the space in between the text/paragraph*/
     }
     footer {
         p {
@@ -51,16 +53,15 @@ body {
     justify-items: center;
     align-items: center;
     max-width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; /*if there is an overflow it will add a horizontal scrollbar*/
 
     .photoGallery {
         width: 70vw;
-        padding: 0 10vw;
+        padding: 0 10vw; /*added padding left and right*/
     }
 }
 
-
-
+/* ↓↓↓ Tablet query*/
 @media only screen and (min-width: 426px) {
     #content {
         h1 {
@@ -92,6 +93,7 @@ body {
     }
 }
 
+/* ↓↓↓ Desktop query*/
 @media only screen and (min-width: 769px) {
     #content {
         h1 {

@@ -1,12 +1,16 @@
+@charset "UTF-8";
 /*Global*/
 /*Tablet*/
 /*Desktop*/
+/*imported variables*/
+/* ↓↓↓ Global*/
 * {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
 
+/* ↓↓↓ Mobile*/
 body {
   display: -ms-grid;
   display: grid;
@@ -20,6 +24,7 @@ body {
 /*Global*/
 /*Tablet*/
 /*Desktop*/
+/* ↓↓↓ Global*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -28,6 +33,7 @@ body {
   text-decoration: none;
 }
 
+/* ↓↓↓ Mobile query*/
 header #phnNmbr {
   background-color: rgba(226, 224, 224, 0.5);
   position: fixed;
@@ -38,22 +44,28 @@ header #phnNmbr {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+  /*arrange the text vertically*/
   text-orientation: upright;
+  /*reading text from top to bottom*/
   padding: 2vh .5vh;
   border-radius: 3vh 0 0 3vh;
   z-index: 1;
+  /*put the element in front*/
 }
 
 header #phnNmbr img {
   width: 2.5vh;
 }
 
+/* ↓↓↓ Navigation bar code*/
 nav {
   font-family: "Montserrat", sans-serif;
   display: -ms-grid;
   display: grid;
+  /*created a grid*/
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  /*created 3 columns*/
   width: 100%;
   justify-items: center;
   -webkit-box-align: center;
@@ -61,6 +73,10 @@ nav {
           align-items: center;
   background-color: black;
   height: 12vh;
+  /* ↓↓↓ Hides the menu*/
+  /* ↓↓↓ Reveal the menu after the burger button is clicked*/
+  /* ↓↓↓ Style for the menu*/
+  /* ↓↓↓ Social media icons and paragraph style*/
 }
 
 nav #logo {
@@ -74,7 +90,9 @@ nav #menu {
   height: 100vh;
   width: 100vw;
   background-color: rgba(238, 163, 155, 0.9);
+  /*set the background color for the menu*/
   z-index: 2;
+  /*set it to 2 so that the phone number that has z-index: 1 will be under it*/
 }
 
 nav #menuButton:checked ~ div {
@@ -91,6 +109,7 @@ nav #menuButton:checked ~ div {
 
 nav #menuButton {
   display: none;
+  /*hide the actual checkbox*/
 }
 
 nav label {
@@ -139,6 +158,7 @@ nav #social img {
   width: 8vw;
 }
 
+/* ↓↓↓ Tablet query - adjusted fonts, padding, sizes*/
 @media only screen and (min-width: 426px) {
   nav {
     display: -ms-grid;
@@ -167,10 +187,12 @@ nav #social img {
   }
   nav #menu {
     width: 40vw;
+    /*adjusted the width of the menu div*/
   }
   nav ul {
     text-align: center;
     list-style-type: none;
+    /*remove the style for unordered list*/
   }
   nav ul li {
     padding: 4vw;
@@ -186,12 +208,14 @@ nav #social img {
   header #phnNmbr {
     font-size: 3.5vh;
     pointer-events: none;
+    /*makes clickable or linked element unclickable*/
   }
   header nav #click {
     pointer-events: none;
   }
 }
 
+/* ↓↓↓ Desktop query*/
 @media only screen and (min-width: 769px) {
   #burgerButton {
     display: none;
@@ -243,15 +267,9 @@ nav #social img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    /*created a flexbox for the li items(navbar menu)*/
     -webkit-column-gap: 3vh;
             column-gap: 3vh;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -263,10 +281,14 @@ nav #social img {
     margin: 0;
     -webkit-transition: .2s ease-in;
     transition: .2s ease-in;
+    /*transition effect for the button animation*/
   }
   nav #menu ul li:hover {
+    /*create a hover effect for the navbar menu*/
     background-color: rgba(223, 194, 194, 0.7);
+    /*set the background opacity to .7*/
     border-radius: 7px 0px 7px 0px;
+    /*adjusted the upper top left radius and lower right bottom*/
   }
   nav #menu ul li a {
     background: none;
@@ -275,6 +297,7 @@ nav #social img {
     margin: 0;
   }
   nav #menu ul li a:hover {
+    /*still part of the hover effect for the navbar menu this time its for the font*/
     color: black;
   }
   header #phnNmbr {
@@ -286,9 +309,11 @@ nav #social img {
   }
   header nav #logo {
     pointer-events: visible;
+    /*makes the clickable or linked element clickable again*/
   }
 }
 
+/*imported the navbar style or design*/
 #content {
   display: -ms-grid;
   display: grid;
@@ -301,6 +326,7 @@ nav #social img {
       -ms-flex-align: center;
           align-items: center;
   overflow-y: auto;
+  /*if there is an overflow it will add a vertical scrollbar*/
   width: 100vw;
 }
 
@@ -325,22 +351,28 @@ nav #social img {
   font-size: 3vw;
 }
 
+/* ↓↓↓ Tablet*/
 @media only screen and (min-width: 426px) {
   #content footer p {
     font-weight: normal;
     text-align: center;
     font-size: 2vw;
+    /*set the font size using variable*/
   }
 }
 
+/* ↓↓↓ Desktop*/
 @media only screen and (min-width: 769px) {
   #content {
     display: -ms-grid;
     display: grid;
+    /*created a grid*/
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    /*created 3 columns*/
     -ms-grid-rows: 3fr 1fr 1fr;
         grid-template-rows: 3fr 1fr 1fr;
+    /*created 3 rows*/
     justify-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -350,15 +382,18 @@ nav #social img {
   #content img {
     -o-object-fit: cover;
        object-fit: cover;
+    /*fit the image in the container*/
     width: 100%;
   }
   #content #img1 {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+    /*position the image in the first column*/
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+    /*position the image in the second row*/
   }
   #content div {
     width: 100%;
@@ -372,6 +407,7 @@ nav #social img {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    /*move the item horizontally*/
     display: block;
     width: 80vw;
     height: 80vh;

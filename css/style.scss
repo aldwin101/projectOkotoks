@@ -1,11 +1,13 @@
-@import 'variables';
+@import 'variables'; /*imported variables*/
 
+/* ↓↓↓ Global*/
 * {
     padding:0;
     margin:0;
     font-family: $websiteFont;
 }
 
+/* ↓↓↓ Mobile*/
 body {
     display: grid;
     grid-template-rows: 2fr 15fr;
@@ -14,14 +16,14 @@ body {
     background-color:#eedede;
 }
 
-@import 'nav';
+@import 'nav'; /*imported the navbar style or design*/
 
 #content {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    overflow-y: auto; /*if there is an overflow it will add a vertical scrollbar*/
     width: 100vw;
 
     iframe {
@@ -48,34 +50,36 @@ body {
     }
 }
 
+/* ↓↓↓ Tablet*/
 @media only screen and (min-width: 426px) {
     #content {
         footer {
                 p {
                 font-weight: normal;
                 text-align: center;
-                font-size: $TftrFntSze;
+                font-size: $TftrFntSze; /*set the font size using variable*/
             }
         }
     }
 }
 
+/* ↓↓↓ Desktop*/
 @media only screen and (min-width: 769px) {
     #content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 3fr 1fr 1fr;
+        display: grid; /*created a grid*/
+        grid-template-columns: 1fr 1fr 1fr; /*created 3 columns*/
+        grid-template-rows: 3fr 1fr 1fr; /*created 3 rows*/
         justify-items: center;
         align-items: center;
         width: 100vw;
         img {
-            object-fit: cover;
+            object-fit: cover; /*fit the image in the container*/
             width: 100%;
         }
 
         #img1 {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
+            grid-column: 1 / 2; /*position the image in the first column*/
+            grid-row: 2 / 3; /*position the image in the second row*/
         }
         
         div{
@@ -85,7 +89,7 @@ body {
             iframe {
                 position: relative;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%); /*move the item horizontally*/
                 display: block;
                 width: 80vw;
                 height: 80vh;

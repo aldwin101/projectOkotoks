@@ -1,5 +1,6 @@
 @import 'variables';
 
+/* ↓↓↓ Global*/
 * {
     font-family: $websiteFont;
     padding:0;
@@ -8,29 +9,31 @@
     text-decoration: none;
 }
 
+/* ↓↓↓ Mobile query*/
 header {
     #phnNmbr {
-    background-color: rgba(226, 224, 224, 0.5);
-    position: fixed;
-    top: 20vh;
-    right: 0;
-    font-size: 2.5vh;
-    font-weight: bolder;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding: 2vh .5vh;
-    border-radius: 3vh 0 0 3vh;
-    z-index: 1;
-    img {
-        width: 2.5vh;
+        background-color: rgba(226, 224, 224, 0.5);
+        position: fixed;
+        top: 20vh;
+        right: 0;
+        font-size: 2.5vh;
+        font-weight: bolder;
+        writing-mode: vertical-rl; /*arrange the text vertically*/
+        text-orientation: upright; /*reading text from top to bottom*/
+        padding: 2vh .5vh;
+        border-radius: 3vh 0 0 3vh;
+        z-index: 1; /*put the element in front*/
+        img {
+            width: 2.5vh;
+        }
     }
 }
 
-}
+/* ↓↓↓ Navigation bar code*/
 nav {
     font-family: $websiteFont;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid; /*created a grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*created 3 columns*/
     width: 100%;
     justify-items: center;
     align-items: center;
@@ -40,17 +43,19 @@ nav {
         width: 65vw;
     }
     
-    #menu {
-        display: none;
+    /* ↓↓↓ Hides the menu*/
+    #menu { 
+        display: none; 
         position: fixed;
         top:12vh;
         height: 100vh;
         width: 100vw;
-        background-color:rgba(238, 163, 155, 0.900);
-        z-index: 2;
+        background-color:rgba(238, 163, 155, 0.900); /*set the background color for the menu*/
+        z-index: 2; /*set it to 2 so that the phone number that has z-index: 1 will be under it*/
     }
 
-    #menuButton:checked ~ div {
+    /* ↓↓↓ Reveal the menu after the burger button is clicked*/
+    #menuButton:checked ~ div { 
         display: block;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
@@ -59,13 +64,14 @@ nav {
     }
     
     #menuButton {
-        display: none;
+        display: none; /*hide the actual checkbox*/
     }
     
     label {
         user-select: none;
     }
 
+    /* ↓↓↓ Style for the menu*/
     ul {
         text-align: center;
         list-style-type: none;
@@ -91,6 +97,7 @@ nav {
         width: 12vw;
     }
 
+    /* ↓↓↓ Social media icons and paragraph style*/
     #social {
         text-align: center;
         position: relative;
@@ -101,6 +108,7 @@ nav {
     }
 }
 
+/* ↓↓↓ Tablet query - adjusted fonts, padding, sizes*/
 @media only screen and (min-width: 426px) {
 nav {
     display: grid;
@@ -129,11 +137,11 @@ nav {
     }
 
     #menu {
-        width: 40vw;
+        width: 40vw; /*adjusted the width of the menu div*/
     }
         ul {
             text-align:center;
-            list-style-type: none;
+            list-style-type: none; /*remove the style for unordered list*/
             
             li {
                 padding: 4vw;
@@ -151,7 +159,7 @@ nav {
     header {
         #phnNmbr {
             font-size: 3.5vh;
-            pointer-events: none;
+            pointer-events: none; /*makes clickable or linked element unclickable*/
 
         }
         nav {
@@ -162,6 +170,7 @@ nav {
     }
 }
 
+/* ↓↓↓ Desktop query*/
 @media only screen and (min-width: 769px) {
     #burgerButton {
         display: none;
@@ -207,10 +216,8 @@ nav {
             height: 0px;
             
             ul {
-                display: flex;
-                flex-direction: row;
+                display: flex; /*created a flexbox for the li items(navbar menu)*/
                 column-gap: 3vh;
-                justify-content: flex-end;
                 align-items: center;
                 position: fixed;
                 top: 6vh;
@@ -218,10 +225,10 @@ nav {
                 li {
                     padding:0;
                     margin: 0;
-                    transition: .2s ease-in;
-                    &:hover {
-                        background-color: rgba(223, 194, 194, 0.7);
-                        border-radius: 7px 0px 7px 0px;
+                    transition: .2s ease-in; /*transition effect for the button animation*/
+                    &:hover { /*create a hover effect for the navbar menu*/
+                        background-color: rgba(223, 194, 194, 0.7); /*set the background opacity to .7*/
+                        border-radius: 7px 0px 7px 0px; /*adjusted the upper top left radius and lower right bottom*/
                     }
 
                     a {
@@ -229,7 +236,7 @@ nav {
                         font-size: 1.5vw;
                         padding: 0;
                         margin: 0;
-                        &:hover {
+                        &:hover { /*still part of the hover effect for the navbar menu this time its for the font*/
                             color: black;
                         }
                     }
@@ -249,7 +256,7 @@ nav {
                 pointer-events: none;
             }
             #logo {
-                pointer-events: visible;
+                pointer-events: visible; /*makes the clickable or linked element clickable again*/
             }
         }
     }

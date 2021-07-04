@@ -1,11 +1,13 @@
 @import 'variables';
 
+/* ↓↓↓ Global*/
 * {
     font-family: $websiteFont;
     padding: 0;
     margin: 0;
 }
 
+/* ↓↓↓ Mobile query*/
 body {
     display: grid;
     grid-template-rows: 2fr 15fr;
@@ -20,7 +22,7 @@ body {
 
 #content {
     text-align: center;
-    input, label {
+    input, label { 
     padding: 0 1vw;
     position: relative;
     top: 2vh;
@@ -37,7 +39,7 @@ body {
             margin-right: 1vw;
         }
     }
-    #pizzaMenu, #pastaMenu, #drinksMenu, #chickenMenu, #dessertMenu {
+    #pizzaMenu, #pastaMenu, #drinksMenu, #chickenMenu, #dessertMenu { /*used a selector(grouping) to apply one style to different id*/
         display: none;
         height: 75vh;
         width: 100vw;
@@ -110,6 +112,7 @@ footer {
     }
 }
 
+/* ↓↓↓ Tablet query*/
 @media only screen and (min-width: 426px) {
     #content {
         .menuPhoto {
@@ -141,6 +144,7 @@ footer {
     }
 }
 
+/* ↓↓↓ Desktop query*/
 @media only screen and (min-width: 769px) {
     #content{
         #subPizza:checked ~ #pizzaMenu, 
@@ -181,12 +185,12 @@ footer {
             position: relative;
             left: 2vw;
             font-size: 2vw;
-            cursor:pointer;
+            cursor:pointer; /*when hovering on the element the cursor changes to a pointer indicating that it is clickable*/
             text-decoration: none;
             padding: 1vh;
             border-radius: 12px 12px 0px 0px;
         }
-        input[type=radio]:checked + label {
+        input[type=radio]:checked + label { /*when the radio button is selected/checked the label background will change*/
             background-color: #ecc0c0;
             }
     }
