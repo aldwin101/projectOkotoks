@@ -93,6 +93,8 @@ nav {
 
     #social {
         text-align: center;
+        position: relative;
+        bottom: 8vh;
         img {
             width: 8vw;
         }
@@ -122,12 +124,12 @@ nav {
     
     #social {
         img {
-            width: 2vw;
+            width: 5vw;
         }
     }
 
     #menu {
-        width: 30vw;
+        width: 40vw;
     }
         ul {
             text-align:center;
@@ -140,7 +142,7 @@ nav {
                 background-color: black;
                 padding: 2vw;
                 color: white;
-                font-size: 2vw;
+                font-size: 3vw;
                 font-weight: bold;
                 }
             }
@@ -252,5 +254,3 @@ nav {
         }
     }
 }
-
-

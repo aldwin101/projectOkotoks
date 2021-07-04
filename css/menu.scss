@@ -21,6 +21,7 @@ body {
 #content {
     text-align: center;
     input, label {
+    padding: 0 1vw;
     position: relative;
     top: 2vh;
     font-size: 5vw;
@@ -115,26 +116,27 @@ footer {
             width: 20vw;
         }
         .name, h2 {
-            font-size: 4vw;
+            font-size: $TprgrphFntSze + 1;
             text-align: left;
         }
         .description, .price {
-            font-size: 3vw;
+            font-size: $TprgrphFntSze;
         }
         input, label {
-            font-size: 4vw;
+            font-size: $TprgrphFntSze + 1;
             padding: 0 1vw;
         }
         #pizzaMenu, #pastaMenu, #drinksMenu, #chickenMenu, #dessertMenu {
             height: 72vh;
         }
     }
-    
+
     footer {
         p {
             font-weight: normal;
             text-align: center;
-            font-size: 2vw;
+            font-size: $TftrFntSze;
+            ;
         }
     }
 }
@@ -159,14 +161,16 @@ footer {
             }
 
             .name {
-                font-size: 1.5rem;
+                font-size: $DprgrphFntSze + .5;
             }
 
             .description, .price {
-                font-size: 1rem;
+                font-size: $DprgrphFntSze - .5;
             }
 
             #text1, #text2 {
+                font-weight: normal;
+                text-align: center;
                 grid-column: 1 / 5;
                 font-size: 2rem;
                 padding-top: 1vh;
@@ -190,7 +194,7 @@ footer {
     footer {
         p {
             font-weight: normal;
-            font-size: 1vw;
+            font-size: $DftrFntSze;
         }
     }
 }

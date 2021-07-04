@@ -1,3 +1,6 @@
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #eedede;
@@ -9,6 +12,9 @@ body {
   height: 100vh;
 }
 
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -120,6 +126,8 @@ nav #phone {
 
 nav #social {
   text-align: center;
+  position: relative;
+  bottom: 8vh;
 }
 
 nav #social img {
@@ -150,10 +158,10 @@ nav #social img {
     display: none;
   }
   nav #social img {
-    width: 2vw;
+    width: 5vw;
   }
   nav #menu {
-    width: 30vw;
+    width: 40vw;
   }
   nav ul {
     text-align: center;
@@ -167,7 +175,7 @@ nav #social img {
     background-color: black;
     padding: 2vw;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
   }
   header #phnNmbr {
@@ -296,9 +304,9 @@ nav #social img {
 }
 
 #content p {
+  text-align: justify;
   font-size: 1rem;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 5vw 10vw;
   line-height: 4vh;
 }
 
@@ -306,6 +314,7 @@ nav #social img {
   font-weight: normal;
   text-align: center;
   font-size: 3vw;
+  line-height: 0;
 }
 
 #gallery {
@@ -330,11 +339,12 @@ nav #social img {
 
 @media only screen and (min-width: 426px) {
   #content h1 {
-    line-height: 5vh;
-    margin-bottom: 3vh;
-  }
-  #content h1 {
     font-family: "Montserrat", sans-serif;
+  }
+  #content p {
+    font-size: 3vw;
+    margin: 5vw 10vw;
+    line-height: 7vh;
   }
   #content #gallery {
     height: 60vh;
@@ -344,6 +354,7 @@ nav #social img {
     padding: 0 5vw;
   }
   #content footer p {
+    margin: 0;
     font-weight: normal;
     text-align: center;
     font-size: 2vw;
@@ -352,10 +363,12 @@ nav #social img {
 
 @media only screen and (min-width: 769px) {
   #content h1 {
-    padding-top: 5vh;
-    font-size: 8vh;
+    padding-top: 4vh;
+    font-size: 3vw;
   }
   #content div p {
+    font-weight: normal;
+    font-size: 2vw;
     line-height: 5vh;
     margin: 2vw 10vw;
   }
@@ -366,6 +379,7 @@ nav #social img {
     width: 30vw;
   }
   #content footer p {
+    margin: 0;
     font-weight: normal;
     font-size: 1vw;
   }

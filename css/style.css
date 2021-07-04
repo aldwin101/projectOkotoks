@@ -1,3 +1,6 @@
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   padding: 0;
   margin: 0;
@@ -14,6 +17,9 @@ body {
   background-color: #eedede;
 }
 
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -125,6 +131,8 @@ nav #phone {
 
 nav #social {
   text-align: center;
+  position: relative;
+  bottom: 8vh;
 }
 
 nav #social img {
@@ -155,10 +163,10 @@ nav #social img {
     display: none;
   }
   nav #social img {
-    width: 2vw;
+    width: 5vw;
   }
   nav #menu {
-    width: 30vw;
+    width: 40vw;
   }
   nav ul {
     text-align: center;
@@ -172,7 +180,7 @@ nav #social img {
     background-color: black;
     padding: 2vw;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
   }
   header #phnNmbr {
@@ -374,6 +382,7 @@ nav #social img {
     grid-column: 1 / 4;
   }
   #content footer p {
+    font-size: 1vw;
     font-weight: normal;
     font-size: 1vw;
   }

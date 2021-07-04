@@ -1,3 +1,6 @@
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -15,6 +18,9 @@ body {
   width: 100vw;
 }
 
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -126,6 +132,8 @@ nav #phone {
 
 nav #social {
   text-align: center;
+  position: relative;
+  bottom: 8vh;
 }
 
 nav #social img {
@@ -156,10 +164,10 @@ nav #social img {
     display: none;
   }
   nav #social img {
-    width: 2vw;
+    width: 5vw;
   }
   nav #menu {
-    width: 30vw;
+    width: 40vw;
   }
   nav ul {
     text-align: center;
@@ -173,7 +181,7 @@ nav #social img {
     background-color: black;
     padding: 2vw;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
   }
   header #phnNmbr {
@@ -287,6 +295,7 @@ nav #social img {
 }
 
 #content input, #content label {
+  padding: 0 1vw;
   position: relative;
   top: 2vh;
   font-size: 5vw;
@@ -440,7 +449,7 @@ footer p {
   #content #subDrinks:checked ~ #drinksMenu .name,
   #content #subChicken:checked ~ #chickenMenu .name,
   #content #subDessert:checked ~ #dessertMenu .name {
-    font-size: 1.5rem;
+    font-size: 2.5vw;
   }
   #content #subPizza:checked ~ #pizzaMenu .description, #content #subPizza:checked ~ #pizzaMenu .price,
   #content #subPasta:checked ~ #pastaMenu .description,
@@ -451,7 +460,7 @@ footer p {
   #content #subChicken:checked ~ #chickenMenu .price,
   #content #subDessert:checked ~ #dessertMenu .description,
   #content #subDessert:checked ~ #dessertMenu .price {
-    font-size: 1rem;
+    font-size: 1.5vw;
   }
   #content #subPizza:checked ~ #pizzaMenu #text1, #content #subPizza:checked ~ #pizzaMenu #text2,
   #content #subPasta:checked ~ #pastaMenu #text1,
@@ -462,6 +471,8 @@ footer p {
   #content #subChicken:checked ~ #chickenMenu #text2,
   #content #subDessert:checked ~ #dessertMenu #text1,
   #content #subDessert:checked ~ #dessertMenu #text2 {
+    font-weight: normal;
+    text-align: center;
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-column: 1 / 5;

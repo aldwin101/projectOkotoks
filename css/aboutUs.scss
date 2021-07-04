@@ -28,9 +28,9 @@ body {
         margin-bottom: 10px;
     }
     p {
+        text-align: justify;
         font-size: 1rem;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 5vw 10vw;
         line-height: 4vh;
     }
     footer {
@@ -38,6 +38,7 @@ body {
         font-weight: normal;
         text-align: center;
         font-size: 3vw;
+        line-height: 0;
         }
     }
 }
@@ -63,12 +64,16 @@ body {
 @media only screen and (min-width: 426px) {
     #content {
         h1 {
-        line-height: 5vh;
-        margin-bottom: 3vh;
+        font-family: $websiteFont;
         }
-        h1 {
-            font-family: $websiteFont;
+
+        p {
+            font-size: $TprgrphFntSze;
+            margin: 5vw 10vw;
+            line-height: $TLnHght;
         }
+    
+
         #gallery {
             height: 60vh;
             .photoGallery {
@@ -78,9 +83,10 @@ body {
         }
         footer {
             p {
+                margin: 0;
                 font-weight: normal;
                 text-align: center;
-                font-size: 2vw;
+                font-size: $TftrFntSze;
             }
         }
     }
@@ -89,11 +95,13 @@ body {
 @media only screen and (min-width: 769px) {
     #content {
         h1 {
-            padding-top: 5vh;
-            font-size: 8vh;
+            padding-top: 4vh;
+            font-size: $Dh1FntSze;
         }
         div {
             p {
+                font-weight: normal;
+                font-size: $DprgrphFntSze;
                 line-height: 5vh;
                 margin: 2vw 10vw;
             }
@@ -107,8 +115,9 @@ body {
         }
         footer {
             p {
+                margin: 0;
                 font-weight: normal;
-                font-size: 1vw;
+                font-size: $DftrFntSze;
             }
         }
     }

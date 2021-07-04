@@ -1,3 +1,6 @@
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #eedede;
@@ -10,6 +13,9 @@ body {
   height: 100vh;
 }
 
+/*Global*/
+/*Tablet*/
+/*Desktop*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -121,6 +127,8 @@ nav #phone {
 
 nav #social {
   text-align: center;
+  position: relative;
+  bottom: 8vh;
 }
 
 nav #social img {
@@ -151,10 +159,10 @@ nav #social img {
     display: none;
   }
   nav #social img {
-    width: 2vw;
+    width: 5vw;
   }
   nav #menu {
-    width: 30vw;
+    width: 40vw;
   }
   nav ul {
     text-align: center;
@@ -168,7 +176,7 @@ nav #social img {
     background-color: black;
     padding: 2vw;
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
   }
   header #phnNmbr {
@@ -289,7 +297,6 @@ main {
   width: 100vw;
   row-gap: 5vh;
   overflow-y: auto;
-  line-height: 5vh;
 }
 
 main iframe {
@@ -297,8 +304,10 @@ main iframe {
   height: 80vw;
 }
 
-main div {
+main #operation, main #inquiries {
   text-align: center;
+  font-size: 4vw;
+  line-height: 5vh;
 }
 
 main a {
@@ -326,6 +335,16 @@ footer {
     background: none;
     color: black;
   }
+  main h1 {
+    font-size: 7vw;
+  }
+  main #operation, main #inquiries {
+    font-size: 3vw;
+    line-height: 7vh;
+  }
+  main footer p {
+    font-size: 2vw;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -343,10 +362,11 @@ footer {
     gap: 1;
   }
   main #inquiries {
+    font-size: 2vw;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    line-height: 8vh;
+    line-height: 9vh;
   }
   main #inquiries .click {
     pointer-events: none;
@@ -354,13 +374,17 @@ footer {
     color: black;
   }
   main #operation {
+    font-size: 2vw;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / 4;
-    line-height: 8vh;
+    line-height: 9vh;
+  }
+  main #operation h1 {
+    font-size: 3vw;
   }
   main footer {
     -ms-grid-row: 3;

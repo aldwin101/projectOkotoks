@@ -38,7 +38,7 @@ body {
         text-align: center;
         font-weight: normal;
     }
-    
+
     footer {
         p {
         font-weight: normal;
@@ -54,7 +54,7 @@ body {
                 p {
                 font-weight: normal;
                 text-align: center;
-                font-size: 2vw;
+                font-size: $TftrFntSze;
             }
         }
     }
@@ -95,6 +95,7 @@ body {
         footer {
             grid-column: 1 / 4;
             p {
+                font-size: $DftrFntSze;
                 font-weight: normal;
                 font-size: 1vw;
             }
